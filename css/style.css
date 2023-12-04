@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amiko', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* colors */
+.backgroundBlack {
+    background-color: #000;
+}
+.backgroundWhite {
+    background-color: #fff;
+}
+
+.backgroundWhite2 {
+    background-color: #F9F9F9;
+}
+
+.textWhite {
+    color: #fff !important;
+}
+
+.textBlack {
+    color: #000 !important;
+}
+.textRed {
+    color: red !important;
+}
+
+/* padd */
+.padding14 {
+    padding-top: 0.875em; /*14px*/
+    padding-bottom: 0.875em;
+}
+
+.padding16 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.padding22 {
+    padding-top: 1.571em;/*22px*/
+    padding-bottom: 1.571em;
+}
+
+.textBold {
+    font-weight: 700;
+}
+
+/* textSize */
+.text12 {
+    font-size: 12px;
+}
+
+.text14 {
+    font-size: 14px;
+}
+
+
+
+.contentContainer {
+    margin: 0 auto;
+    width: 85rem; /*1360px*/
+}
+
+.contentContainer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.ul-nav {
+    list-style: none;
+    display: flex;
+    gap: 2em; /*14px*/
+}
+
+.ads {
+    margin-top: 1.5em; /*24px*/
+    margin-bottom: 7.375em; /*118px*/
+    display: flex;
+    align-items: center;
+}
+
+.ad {
+    display: block;
+    width: 100%;
+    height: 482px;
+    background-color: #c4c4c4;
+}
+
+.prev, .next {
+    position: absolute;
+    display: block;
+    background-color: #e3e3e3;
+    height: 98px;
+    width: 32px;
+}
+
+.prev {
+    left: 0%;
+}
+.next {
+    right: 0%;
+}
+
+.groups {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9.813em; /*157px*/
+}
+
+.group {
+    display: block;
+    width: 48%;
+    height: 340px;
+    background-color: #c4c4c4;
+}
+
+.goods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6.25em; /*100px*/
+}
+
+.headTextBlock {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px; /**/
+}
+
+.btn-goods {
+    padding: 0.625em 5.625em;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 74px; /*74px*/
+}
+
+.goodsList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.good {
+    width: 32%;
+    position: relative;
+    /* border: 1px solid #000; */
+}
+
+.goodStarContainer{
+    position: absolute;
+    right: 4%;
+    top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.goodStar {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #c4c4c4;
+    border-radius: 6px;
+}
+
+.goodStarContainer_Active{
+    background-color: #000 !important;
+}
+
+.goodStar_Active {
+    background-color: #fff !important;
+}
+
+.goodImage {
+    display: block;
+    width: 100%;
+    height: 482px;
+    background-color: #e1e1e1;
+}
+
+.goodName {
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px; /* 208.333% */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    margin-top: 0.625em; /*10px*/
+    margin-bottom: 1.25em; /*20px*/
+}
+
+.goodPrice {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
