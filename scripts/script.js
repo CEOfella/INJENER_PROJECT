@@ -1,31 +1,24 @@
-const apiUrl = 'https://a21455-041c.s.d-f.pw/api/Address/4a162ded-1cff-4603-b217-e9fdbebc7f37';
+document.addEventListener("DOMContentLoaded", function() {
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const carousel = document.querySelector(".carousel");
+  const slides = document.querySelectorAll(".slide");
 
-const requestData = {
-  colorName: 'Black',
-  skuID: 'FF1234567890',
-  releaseDate: '2021-10-17T21:44:16.871Z',
-  country: 'ExampleCountry',
-  city: 'ExampleCity',
-  street: 'ExampleStreet',
-  house: 'ExampleHouse',
-  room: 123 // Замените на нужное значение
-};
+  let slideIndex = 0;
 
-const requestOptions = {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(requestData)
-};
+  function showSlide(index) {
+      slides.forEach((slide) => {
+          slide.style.transform = `translateX(-${index * 100}%)`;
+      });
+  }
 
-fetch(apiUrl, requestOptions)
-  .then(response => response.json())
-  .then(data => {
-    console.log('ID созданного адреса:', data);
-    // Дальнейшие действия с данными, если нужно
-  })
-  .catch(error => {
-    console.error('Произошла ошибка:', error);
-    // Обработка ошибки
+  prevButton.addEventListener("click", function() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
   });
+
+  nextButton.addEventListener("click", function() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+  });
+});

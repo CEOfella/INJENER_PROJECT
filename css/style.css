@@ -100,7 +100,9 @@ a {
 
 .prev, .next {
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #e3e3e3;
     height: 98px;
     width: 32px;
@@ -108,7 +110,12 @@ a {
 
 .prev {
     left: 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+
 .next {
     right: 0%;
 }
@@ -216,3 +223,25 @@ a {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
+
+.ads.contentContainer {
+    max-width: 1380px; /* Максимальная ширина контейнера */
+    width: 100%;
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 100%; /* Ширина слайда равна 100% ширины контейнера */
+}
+
+.slide img {
+    width: 100%; /* Заполняем полностью ширину слайда */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
